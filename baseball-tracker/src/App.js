@@ -24,7 +24,18 @@ class App extends React.Component {
     }
   }
 
+  onBall = () => {
+    if (this.state.balls + 1 > 3) {
+      this.setState({ balls: 0 })
+    } else {
+      this.setState({ balls: this.state.balls + 1 });
+    }
+  }
+
   
+
+  }
+
 
 
 //  onBall
