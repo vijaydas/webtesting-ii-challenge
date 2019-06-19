@@ -7,6 +7,9 @@ class Dashboard extends React.Component {
         return (
             <div>
                 <button onClick={this.props.onStrike}> Strike </button>
+                <button onClick={this.props.onBall}> Ball </button>
+                <button onClick={this.props.onFoul}> Foul </button>
+                <button onClick={this.props.onHit}> Hit </button>
             </div>
         )
     }

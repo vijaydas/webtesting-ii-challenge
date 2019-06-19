@@ -38,7 +38,7 @@ class App extends React.Component {
   onFoul = () => {
     this.setState({ fouls: this.state.fouls + 1 });
     if (this.state.strikes < 2) {
-      this.state({ strikes: this.state.strikes + 1 })
+      this.setState({ strikes: this.state.strikes + 1 })
     }
   }
 
@@ -56,7 +56,13 @@ render() {
     <div className="App">
         <Display batterStats={this.state} />
 
-        <Dashboard onStrike={this.onStrike} />
+        <Dashboard
+        onStrike={this.onStrike}
+        onBall={this.onBall}
+        onFoul={this.onFoul}
+        onHit={this.onHit}
+               
+        />
 
       </div>
   );
