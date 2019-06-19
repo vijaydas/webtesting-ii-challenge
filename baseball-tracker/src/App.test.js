@@ -1,9 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { render } from '@testing-library/react';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+
+
+import App from "./App";
+
+describe("<App />", () => {
+  it("renders without crashing", () => {
+    const div = document.createElement("div");
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it("renders without errors", () => {
+    render(<App />);
+    // if there are errors rendering the component, the test will fail
+
+  });
+
+  it("renders without failing", () => {
+    render(<App />);
+    // if there are errors rendering the component, the test will fail
+
+  });
+
+
 });
