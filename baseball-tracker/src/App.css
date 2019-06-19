@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+
+button  {
+  background-color:lightblue;
+  border: 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 1.0em;
+}

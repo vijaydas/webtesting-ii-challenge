@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Display from './components/Display';
+import Dashboard from './components/Dashboard';
 
 class App extends React.Component {
   state = {
@@ -55,12 +56,7 @@ render() {
     <div className="App">
         <Display batterStats={this.state} />
 
-        {/* <Dashboard
-          addStrike={this.addStrike}
-          addBall={this.addBall}
-          addFoul={this.addFoul}
-          addHit={this.addHit} */}
-        />
+        <Dashboard onStrike={this.onStrike} />
 
       </div>
   );
