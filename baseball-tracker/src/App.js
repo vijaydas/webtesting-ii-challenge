@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 
+import Display from './components/Display';
+
 class App extends React.Component {
   state = {
     strikes: 0,
@@ -51,7 +53,16 @@ onHit = () => {
 render() {
   return (
     <div className="App">
-    </div>
+        <Display batterStats={this.state} />
+
+        {/* <Dashboard
+          addStrike={this.addStrike}
+          addBall={this.addBall}
+          addFoul={this.addFoul}
+          addHit={this.addHit} */}
+        />
+
+      </div>
   );
 }
 
