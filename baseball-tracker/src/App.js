@@ -22,7 +22,7 @@ class App extends React.Component {
     } else {
       this.setState({ strikes: this.state.strikes + 1 });
     }
-  }
+  };
 
   onBall = () => {
     if (this.state.balls + 1 > 3) {
@@ -30,19 +30,23 @@ class App extends React.Component {
     } else {
       this.setState({ balls: this.state.balls + 1 });
     }
+  };
+
+  onFoul = () => {
+    this.setState({ fouls: this.state.fouls + 1 });
+    if (this.state.strikes < 2) {
+      this.state({ strikes: this.state.strikes + 1 })
+    }
   }
-
-  
-
-  }
-
-
 
 //  onBall
 //  onFoul
 //  onHit
 
-
+onHit = () => {
+  this.setState({ hits: this.state.hits + 1 });
+  this.setState({ strikes: 0, balls: 0 })
+}
 
 render() {
   return (
